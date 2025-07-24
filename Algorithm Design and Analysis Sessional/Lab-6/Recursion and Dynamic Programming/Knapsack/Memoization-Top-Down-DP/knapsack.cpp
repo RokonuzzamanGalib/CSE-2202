@@ -22,12 +22,20 @@ int knapsack(int W, int wt[], int val[], int n) {
 
 int main() {
     int n, W;
+    cout<<"Enter n and W : ";
     cin >> n >> W;
 
     int val[n], wt[n];
+    
+    for (int i = 0; i < n; i++) {
+        cout<<"Enter Value of obj "<<i+1<<" ";
+        cin >> val[i];
+    }
 
-    for (int i = 0; i < n; i++) cin >> val[i];
-    for (int i = 0; i < n; i++) cin >> wt[i];
+    for (int i = 0; i < n; i++){
+        cout<<"Enter Weight of obj "<<i+1<<" ";
+    cin >> wt[i];  
+     }
 
     // Initialize dp array with -1
     for (int i = 0; i <= n; i++)
